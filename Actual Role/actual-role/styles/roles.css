@@ -1,0 +1,231 @@
+/* || PÁGINA ROLÊS GERAIS E PESQUISA || */
+
+.pesquisa--coluna-filtros--titulo {
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.collapsible {
+    background-color: var(--branco-puro);
+    color: var(--cinza-medio);
+    cursor: pointer;
+    padding: 12px 12px 12px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.collapsible {
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.collapsible.active,
+.collapsible:hover {
+    background-color: var(--cinza-claro);
+    color: var(--branco-puro);
+}
+
+.content p {
+    color: var(--cinza-medio);
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.content p:last-child {
+    padding-bottom: 20px;
+}
+
+.content label {
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+input[type=radio] {
+    box-sizing: border-box;
+    appearance: none;
+    background: var(--branco-puro);
+    outline: 2px solid var(--cinza-medio);
+    border: 2px solid var(--branco-puro);
+    width: 12px;
+    height: 12px;
+}
+
+input[type='radio']:checked {
+    background: var(--cinza-medio);
+}
+
+.collapsible:after {
+    content: '\25BC';
+    font-size: 12px;
+    color: var(--cinza-medio);
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible:hover:after {
+    color: var(--branco-puro);
+}
+  
+.collapsible.active:after {
+    content: '\25B2';
+    color: var(--branco-puro);
+}
+
+.pesquisa--coluna-filtros {
+    font-family: var(--fonte-outfit);
+    padding-right: 0;
+}
+
+.pesquisa--coluna-filtros--titulo {
+    padding: 12px 12px 12px 18px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--cinza-escuro-forte);
+    position: relative;;
+}
+
+.pesquisa--coluna-filtros--titulo p {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.fa-filter-circle-xmark {
+    color: var(--cinza-medio);
+    position: absolute;
+    right: 10px;
+    bottom: 22px;
+}
+
+.fa-filter-circle-xmark:hover {
+    color: var(--cinza-escuro-forte);
+    cursor: pointer;
+}
+
+.pesquisa--coluna-roles {
+    background-color: var(--cinza-claro-fundo);
+    border-left: 1px solid var(--cinza-borda);
+    font-family: var(--fonte-outfit);
+    min-height: calc(100vh - 60px);
+    padding: 20px 15px;
+}
+
+.pesquisa--coluna-roles--titulo-resultados {
+    border-bottom: 1px solid var(--cinza-borda);
+    margin-left: 25px;
+    width: 80%;
+}
+
+.pesquisa--coluna-roles--titulo-resultados h5 {
+    color: var(--cinza-medio);
+    margin-bottom: 15px;
+}
+
+.role--card-item {
+    animation-name: aparecer;
+    animation-duration: 1s;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 10px;
+    width: 80%;
+    margin: 25px;
+    opacity: 1;
+    position: relative;
+}
+
+@keyframes aparecer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.role--card-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.role--card-item--imagem {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.role--card-item--imagem img {
+    border-radius: 10px 0px 0px 10px;
+    height: 250px;
+    width: 250px;
+}
+
+.role--card-item--infos {
+    display: inline-block;
+    padding: 15px;
+}
+
+.role--card-item--infos h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.role--card-item--infos a {
+    color: var(--amarelo-marca);
+    text-decoration: none;
+}
+
+.role--card-item--infos p {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.role--card-item--infos .recii--organizador {
+    color: var(--cinza-medio);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.role--card-item--infos-detalhes--titulos {
+    display: inline-block;
+}
+
+.role--card-item--infos-detalhes--descricao {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.role--card-item--botao-detalhes {
+    display: inline-block;
+    font-size: 14px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.role--card-item--botao-detalhes button {
+    padding: 10px 20px;
+    background-color: var(--cinza-escuro-forte);
+    border: 1px solid var(--cinza-escuro-selecao);
+    border-radius: 10px;
+    color: var(--branco-puro);
+}
+
+.role--card-item--botao-detalhes button:hover {
+    background-color: var(--amarelo-marca);
+    border-color: var(--amarelo-borda);
+    color: var(--cinza-escuro-forte);
+}
+
+.role--card-item--botao-favoritar {
+    display: inline-block;
+    font-size: 14px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.role--card-item--botao-favoritar button {
+    background-color: transparent;
+    border: none;
+    color: var(--cinza-claro);
+}
+
+.role--card-item--botao-favoritar button:hover {
+    color: var(--cinza-escuro-forte);
+}

@@ -1,0 +1,426 @@
+/* || ARQUIVOS DE CSS || */
+
+@import "amigos.css";
+@import "cadastrorole.css";
+@import "cadastrouser.css";
+@import "evento.css";
+@import "index.css";
+@import "login.css";
+@import "menu.css";
+@import "roles.css";
+@import "usuario.css";
+
+/* || ROOT || */
+
+:root {
+
+    /* -- Cores -- */
+
+    --amarelo-marca: #ECD60F;
+    --amarelo-borda: #d5c111;
+    --branco-puro: #FFFFFF;
+    --cinza-borda: #DBDBDB;
+    --cinza-claro: #CCCCCC;
+    --cinza-claro-fundo: #FAFAFA;
+    --cinza-medio: #767676;
+    --cinza-escuro-forte: #232426;
+    --cinza-escuro-selecao: #131313;
+    --logo-facebook: #1878f1;
+    --logo-instagram: #a12aaa;
+    --vermelho-botao-remover: #e74c3c;
+    --vermelho-borda-bota-remover: #e46b65;
+    --vermelho-botao-remover-hover: #d2433c;
+    --vermelho-favorito: #bb2525;
+    --vermelho-link: #750b0b;
+    --vermelho-letras: #8e0000;
+
+    /* -- Fontes -- */
+
+    --fonte-outfit: 'Outfit', sans-serif;
+}
+
+/* || RESET || */
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* || PÁGINA PADRÃO || */
+
+/* || \/\/\/ CABEÇALHO \/\/\/ || */
+
+.navbar,
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: var(--fonte-outfit);
+}
+
+.cabecalho--logo {
+    max-height: 45px;
+}
+
+.cabecalho--links-principais {
+    margin-right: 20px;
+}
+
+.cabecalho--links-principais a {
+    color: var(--branco-puro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    width: 95px;
+}
+
+.cabecalho--links-usuario a {
+    color: var(--branco-puro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.cabecalho--links-usuario img {
+    border-radius: 50%;
+    height: 35px;
+    margin-right: 10px;
+    width: 35px;
+}
+
+.cabecalho--links-principais a:hover,
+.cabecalho--links-principais a:focus,
+.cabecalho--links-usuario a:hover,
+.cabecalho--links-usuario a:focus {
+    color: var(--branco-puro);
+    background-color: var(--cinza-escuro-selecao);
+}
+
+.barra--pesquisa {
+    margin-right: 15px;
+}
+
+.barra--pesquisa input {
+    background-image: url(../imgs/search.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: 9px;
+    background-color: var(--cinza-escuro-forte);
+    border-color: var(--cinza-medio);
+    border-radius: 1em;
+    color: var(--cinza-medio);
+    height: 35px;
+    padding-left: 30px;
+    transition: width 1s;
+    width: 180px;
+}
+
+.barra--pesquisa input:focus {
+    background-color: var(--cinza-escuro-forte);
+    border-color: var(--amarelo-marca);
+    box-shadow: none;
+    outline-color: var(--amarelo-marca);
+    outline-style: solid;
+    outline-width: medium;
+    color: var(--branco-puro);
+    width: 300px;
+}
+
+.links-usuario--profile {
+    margin-right: 10px;
+}
+
+.fa-user,
+.fa-arrow-right-to-bracket {
+    margin-right: 10px;
+}
+
+
+/* || /\/\/\ CABEÇALHO /\/\/\ || */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* || \/\/\/ CORPO \/\/\/ || */
+
+main {
+    min-height: calc(100vh - 60px);
+}
+
+/* || /\/\/\ CORPO /\/\/\ || */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* || \/\/\/ PAINEL LATERAL \/\/\/ || */
+
+.painel--lista-amigos {
+    font-family: var(--fonte-outfit);
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid var(--cinza-medio);
+    min-height: 70px;
+    max-height: 70px;
+}
+
+.offcanvas-body--campo-pesquisa {
+    background-image: url(imgs/search.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: 9px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 1em;
+    color: var(--cinza-medio);
+    height: 35px;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.offcanvas-body--campo-pesquisa:focus {
+    box-shadow: none;
+    outline-color: var(--cinza-escuro-forte);
+    outline-style: solid;
+    outline-width: medium;
+}
+
+.offcanvas-body--campo-amigos {
+    margin-top: 20px;
+}
+
+.campo-amigos--item-amigo {
+    font-family: var(--fonte-outfit);
+}
+
+.campo-amigos--item-amigo:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.item-amigo--perfil-foto,
+.item-amigo--perfil-nome,
+.item-amigo--botao-adicionar {
+    display: inline-block;
+}
+
+.item-amigo--perfil-foto img {
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.item-amigo--perfil-nome {
+    margin-left: 10px;
+}
+
+.item-amigo--perfil-nome a {
+    color: var(--cinza-escuro-forte);
+    text-decoration: none;
+}
+
+.item-amigo--perfil-nome a:hover {
+    color: var(--vermelho-link);
+}
+
+#btnAmigos {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+}
+
+/* || /\/\/\ PAINEL LATERAL /\/\/\ || */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* || \/\/\/ RODAPÉ \/\/\/ || */
+
+.rodape {
+    color: var(--cinza-medio);
+    font-size: 14px;
+    padding-top: 20px;
+    font-family: var(--fonte-outfit);
+    font-weight: 300;
+}
+
+.rodape--logo {
+    width: 100%;
+}
+
+.rodape--linha-dois {
+    margin-top: 15px;
+}
+
+.rodape--linha-dois-titulo {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+}
+
+.rodape--coluna-sobre {
+    padding-right: 20px;
+}
+
+.rodape--linha-dois-lista,
+.rodape--linha-dois-lista a {
+    color: var(--cinza-medio);
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+}
+
+.rodape--linha-dois-lista a:hover {
+    color: var(--branco-puro);
+}
+
+.rodape--coluna-contato a {
+    color: var(--cinza-medio);
+    margin-right: 10px;
+}
+
+.rodape--coluna-contato a:hover {
+    color: var(--branco-puro);
+}
+
+.rodape--coluna-contato--redes-sociais {
+    margin-top: 10px;
+}
+
+.rodape--linha-tres {
+    border-top: 1px solid var(--cinza-medio);
+    font-size: 12px;
+    text-align: center;
+}
+
+.rodape--linha-tres-copyright {
+    padding-top: 10px;
+}
+
+/* || /\/\/\ RODAPÉ /\/\/\ || */
+
+.principal--perfil {
+    font-family: var(--fonte-outfit);
+}
+
+.pagina--perfil-foto {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.pagina--perfil-foto img {
+    border: 5px solid var(--branco-puro);
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+
+    outline: 5px solid var(--amarelo-marca);
+}
+
+.pagina--perfil-nome h3 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.pagina--perfil-nome p {
+    color: var(--cinza-medio);
+}
+
+.pagina--perfil-estatisticas {
+    border-bottom: 1px solid var(--cinza-borda);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.pagina--perfil-estatisticas>div {
+    padding: 0 30px;
+}
+
+.pagina--perfil-estatisticas>div:not(:last-child) {
+    border-right: 1px solid var(--cinza-borda);
+}
+
+.pagina--perfil-estatisticas p {
+    margin-bottom: 0;
+}
+
+.pagina--perfil-estatisticas>div>p:first-child {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.pagina--perfil-estatisticas>div>p:nth-child(2) {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.pagina--perfil--roles-favoritos--titulo {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.pagina--perfil--roles-favoritos--titulo h4 {
+    color: var(--cinza-borda);
+    text-transform: uppercase;
+}
+
+.pagina--perfil--roles-favoritos--cards {
+    margin-bottom: 30px;
+}
+
+.role-favorito--card {
+    padding: 10px;
+}
+
+.role-favorito--card--item {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+}
+
+.role-favorito--card--item--imagem {
+    position: relative;
+}
+
+.role-favorito--card--item--imagem img {
+    width: 100%;
+}
+
+.role-favorito--card--item--imagem button {
+    background-color: transparent;
+    border: none;
+    color: var(--vermelho-botao-remover);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.role-favorito--card--item--imagem button:hover {
+    color: var(--vermelho-botao-remover-hover);
+}
+
+.role-favorito--card--item--nome {
+    padding-top: 10px;
+}
+
+.role-favorito--card--item--nome h6 {
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.role-favorito--card--item--nome p {
+    color: var(--cinza-medio);
+    margin-bottom: 5px;
+}

@@ -1,0 +1,90 @@
+.cadastro--evento--nome--linha1,
+.cadastro--evento--endereco--linha1,
+.cadastro--evento--endereco--linha2,
+.cadastro--evento--endereco--linha3,
+.cadastro--evento--filtros--linha1,
+.cadastro--evento--contato--linha1,
+.cadastro--evento--contato--linha2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cadastro--evento--nome {
+    display: inline-block;
+    width: 65%;
+}
+
+.cadastro--evento--data {
+    display: inline-block;
+    width: 30%;
+}
+
+.cadastro--evento--endereco-rua {
+    display: inline-block;
+    width: 70%;
+}
+
+.cadastro--evento--endereco-numero {
+    display: inline-block;
+    width: 25%;
+}
+
+.cadastro--evento--endereco-complemento {
+    display: inline-block;
+    width: 40%;
+}
+
+.cadastro--evento--endereco-bairro {
+    display: inline-block;
+    width: 55%;
+}
+
+.cadastro--evento--endereco-cidade {
+    display: inline-block;
+    width: 70%;
+}
+
+.cadastro--evento--endereco-estado {
+    display: inline-block;
+    width: 25%;
+}
+
+.cadastro--evento--descricao textarea {
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+    height: 150px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.cadastro--evento--filtros-idade {
+    display: inline-block;
+    width: 30%;
+}
+
+.cadastro--evento--filtros-preco {
+    display: inline-block;
+    width: 30%;
+}
+
+.cadastro--evento--filtros-categoria {
+    display: inline-block;
+    width: 30%;
+}
+
+.cadastro--evento--contato-telefone,
+.cadastro--evento--contato-email,
+.cadastro--evento--contato-instagram,
+.cadastro--evento--contato-facebook {
+    display: inline-block;
+    width: 47%;
+}
+
+.cadastro--foto--varias {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cadastro--foto--varias .form-group {
+    width: 30%;
+}

@@ -1,0 +1,31 @@
+.principal--menu {
+    background-color: var(--cinza-claro-fundo);
+    font-family: var(--fonte-outfit);
+}
+
+#cad-event-box {
+    background-color: var(--branco-puro);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 20px;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+#cad-event-form p {
+    color: var(--cinza-claro);
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#menu-box {
+    background-color: var(--branco-puro);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 15px;
+    margin-top: 200px;
+    padding: 40px 0;
+}
+
+#menu-box p:last-child {
+    margin-bottom: 0;
+}
