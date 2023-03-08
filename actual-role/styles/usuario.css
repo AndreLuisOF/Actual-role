@@ -1,0 +1,136 @@
+/* || PÁGINA PERFIL DO USUÁRIO || */
+
+.perfil-usuario {
+    font-family: var(--fonte-outfit);
+    margin-top: 20px;
+}
+
+.perfil-usuario--foto-perfil {
+    text-align: center;
+}
+
+.perfil-usuario--foto-perfil img {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+}
+
+.perfil-usuario--coluna-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.perfil-usuario--botoes-feed {
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.perfil-usuario--infos-detalhadas {
+    padding: 20px;
+}
+
+.perfil-usuario--infos-detalhadas p {
+    margin-bottom: 0.5rem;
+}
+
+.perfil-usuario--lista-infos-detalhadas--titulo:not(:first-child) {
+    margin-top: 20px;
+}
+
+.perfil-usuario--lista-infos-detalhadas--titulo {
+    border-bottom: 1px solid var(--cinza-borda);
+    margin-bottom: 10px;
+}
+
+.perfil-usuario--sobre-infos {
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.perfil-usuario--contatos-gerais button {
+    border: 1px solid var(--cinza-borda);
+    background-color: var(--branco-puro);
+    color: var(--cinza-escuro-forte);
+    padding: 5px 10px;
+}
+
+.perfil-usuario--botoes-feed button {
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--branco-puro);
+    color: var(--cinza-medio);
+}
+
+.w3-red {
+    border: none;
+    color: var(--cinza-escuro-forte) !important;
+    border-bottom: 4px solid var(--vermelho-letras) !important;
+}
+
+.fa-envelope,
+.fa-comment {
+    margin-right: 10px;
+}
+
+
+/* == COMENTÁRIOS == */
+
+.pagina--perfil--comentarios {
+    margin-bottom: 40px;
+}
+
+.pagina--perfil--comentarios--texto {
+    position: relative;
+}
+
+.pagina--perfil--comentarios--texto textarea {
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+    height: 100px;
+    padding: 10px 15px;
+    resize: none;
+    width: 100%;
+}
+
+.pagina--perfil--comentarios--texto button {
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+.pagina--perfil--comentarios--posts--item {
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    display: flex;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.pagina--perfil--comentarios--posts--item--foto img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.pagina--perfil--comentarios--posts--item--infos {
+    margin-left: 20px;
+}
+
+.pagina--perfil--comentarios--posts--item--infos h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pagina--perfil--comentarios--posts--item--infos i {
+    margin-right: 5px;
+}
+
+.pagina--perfil--comentarios--posts--item--infos p:not(:last-child) {
+    font-weight: 200;
+}
+
+.pagina--perfil--comentarios--posts--item--infos p:last-child {
+    color: var(--cinza-medio);
+    margin-bottom: 0;
+}

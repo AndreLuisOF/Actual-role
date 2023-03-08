@@ -1,0 +1,141 @@
+/* || PÁGINA LISTA DE AMIGOS || */
+
+#telaMelhoresAmigos {
+    margin-top: 20px;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+#telaUsuariosGeral {
+    margin-top: 20px;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    width: 75%;
+}
+
+.coluna--melhores-amigos {
+    border-right: 1px solid var(--cinza-borda);
+    padding: 20px 40px;
+    font-family: var(--fonte-outfit);
+}
+
+.coluna--melhores-amigos-texto-negativo {
+    font-style: italic;
+    color: var(--cinza-medio);
+}
+
+.coluna--melhores-amigos-resultado-negativo {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.coluna--melhores-amigos-resultado-negativo img {
+    max-width: 80%;
+}
+
+.coluna--usuarios-geral {
+    background-color: var(--cinza-claro-fundo);
+    font-family: var(--fonte-outfit);
+    padding: 20px 20px 20px 40px;
+}
+
+.item-amigo--botao-adicionar {
+    float: right;
+    padding-right: 20px;
+}
+
+.item-amigo--botao-adicionar button {
+    border: 1px solid var(--cinza-borda);
+}
+
+.item-amigo--botao-adicionar button,
+.item-amigo--botao-remover button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: var(--fonte-outfit);
+}
+
+.item-amigo--botao-remover {
+    float: right;
+    padding-right: 20px;
+}
+
+.item-amigo--botao-remover button {
+    background-color: var(--vermelho-botao-remover);
+    border: 1px solid var(--vermelho-borda-bota-remover);
+    color: var(--branco-puro);
+}
+
+.item-amigo--botao-remover button:hover {
+    background-color: var(--vermelho-botao-remover-hover);
+    border: 1px solid var(--vermelho-borda-bota-remover);
+}
+
+.coluna--usuarios-geral--campo-pesquisa {
+    background-image: url(imgs/search.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: 9px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 1em;
+    color: var(--cinza-medio);
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    width: 75%;
+}
+
+.coluna--usuarios-geral--campo-pesquisa:focus {
+    box-shadow: none;
+    outline-color: var(--cinza-escuro-forte);
+    outline-style: solid;
+    outline-width: medium;
+}
+
+.coluna--melhores-amigos--campo-pesquisa {
+    background-image: url(imgs/search.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: 9px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 1em;
+    color: var(--cinza-medio);
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.coluna--melhores-amigos--campo-pesquisa:focus {
+    box-shadow: none;
+    outline-color: var(--cinza-escuro-forte);
+    outline-style: solid;
+    outline-width: medium;
+}
+
+.fa-user-plus {
+    margin-right: 5px;
+}
+
+.modal-body--perfil-imagem {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.modal-body--perfil-imagem img {
+    height: 150px;
+    width: 150px;
+}
+
+.modal-body--perfil-descricao-infos {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.modal-body--perfil-descricao-infos p {
+    margin-bottom: 0.5rem;
+}

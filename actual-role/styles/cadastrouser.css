@@ -1,0 +1,62 @@
+#cad-user-box {
+    background-color: var(--branco-puro);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 20px;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+#cad-user-box a {
+    color: var(--cinza-escuro-forte);
+}
+
+#cad-user-form p {
+    color: var(--cinza-claro);
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.cadastro--endereco--linha1, .cadastro--endereco--linha2, .cadastro--endereco--linha3, .cadastro--contato--linha1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cadastro--endereco-rua {
+    display: inline-block;
+    width: 75%;
+}
+
+.cadastro--endereco-numero {
+    display: inline-block;
+    max-width: 20%;
+}
+
+.cadastro--endereco-complemento {
+    display: inline-block;
+    max-width: 40%;
+}
+
+.cadastro--endereco-bairro {
+    display: inline-block;
+    width: 55%;
+}
+
+.cadastro--endereco-cidade {
+    display: inline-block;
+    width: 70%;
+}
+
+.cadastro--endereco-estado {
+    display: inline-block;
+    max-width: 25%;
+}
+
+.cadastro--contato-twitter, .cadastro--contato-instagram, .cadastro--contato-facebook {
+    display: inline-block;
+    width: 30%;
+}
+
+.text-login-cad {
+    margin-top: 25px;
+}

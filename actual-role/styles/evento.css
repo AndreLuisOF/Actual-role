@@ -1,0 +1,156 @@
+.principal--evento {
+    font-family: var(--fonte-outfit);
+}
+
+.pagina--evento--titulo-principal {
+    color: var(--amarelo-marca);
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.pagina--evento--carrossel img {
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-indicators button {
+    border-radius: 50%;
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.pagina--evento--descricao,
+.pagina--evento--localizacao,
+.pagina--evento--contatos,
+.pagina--evento--confirmacao {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.pagina--evento--descricao p {
+    font-weight: 200;
+    text-align: justify;
+}
+
+.pagina--evento--localizacao i {
+    margin-right: 10px;
+}
+
+.pagina--evento--localizacao button {
+    color: var(--branco-puro);
+}
+
+.pagina--evento--contatos h6,
+.pagina--evento--localizacao h6,
+.pagina--evento--confirmacao h6 {
+    color: var(--cinza-medio);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.pagina--evento--contatos--principais p i {
+    color: var(--cinza-medio);
+    margin-right: 10px;
+}
+
+.pagina--evento--contatos--sociais {
+    display: flex;
+    justify-content: center;
+}
+
+.pagina--evento--contatos--sociais i {
+    margin: 0 10px;
+}
+
+.pagina--evento--contatos--sociais a {
+    color: var(--cinza-medio);
+}
+
+.pagina--evento--contatos--sociais .fa-instagram:hover {
+    color: var(--logo-instagram);
+}
+
+.pagina--evento--contatos--sociais .fa-square-facebook:hover {
+    color: var(--logo-facebook);
+}
+
+.pagina--evento--confirmacao {
+    position: relative;
+}
+
+.pagina--evento--confirmacao button {
+    background-color: transparent;
+    border: none;
+    color: var(--cinza-medio);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pagina--evento--comentarios {
+    margin: 40px 0;
+}
+
+.pagina--evento--comentarios--texto {
+    position: relative;
+}
+
+.pagina--evento--comentarios--texto textarea {
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+    font-weight: 200;
+    height: 100px;
+    padding: 10px 15px;
+    resize: none;
+    width: 100%;
+}
+
+.pagina--evento--comentarios--texto button {
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+.pagina--evento--comentarios--posts--item {
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    display: flex;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.pagina--evento--comentarios--posts--item--foto img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.pagina--evento--comentarios--posts--item--infos {
+    margin-left: 20px;
+}
+
+.pagina--evento--comentarios--posts--item--infos h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pagina--evento--comentarios--posts--item--infos i {
+    margin-right: 5px;
+}
+
+.pagina--evento--comentarios--posts--item--infos p:not(:last-child) {
+    font-weight: 200;
+}
+
+.pagina--evento--comentarios--posts--item--infos p:last-child {
+    color: var(--cinza-medio);
+    margin-bottom: 0;
+}
+
+.pagina--evento--confirmacao--usuarios img {
+    border-radius: 50%;
+    height: 45px;
+    padding: 5px;
+    width: 45px;
+}

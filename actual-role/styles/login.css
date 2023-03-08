@@ -1,0 +1,28 @@
+.background--login {
+    background-color: var(--cinza-claro-fundo);
+}
+
+#login {
+    font-family: var(--fonte-outfit);
+}
+
+#login-box {
+    background-color: var(--branco-puro);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 20px;
+    margin-top: 130px;
+    padding: 30px;
+}
+
+#login-box p {
+    color: var(--cinza-medio);
+    margin-bottom: 0;
+}
+
+#login-box a {
+    color: var(--cinza-escuro-forte);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actual Rolê</title>
+
+    <!-- LINKS do Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- JS do Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/0a21422c98.js" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <!-- LINKS da fonte Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho bg-dark sticky-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg bg-dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt="Logo do site"
+                                    class="cabecalho--logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                                <div class="navbar-nav cabecalho--links-principais" id="linksNavbar">
+                                    <a class="nav-link" href="menu.html">Menu</a>
+                                    <a class="nav-link" href="roles.html">Rolês</a>
+                                    <a class="nav-link" href="amigos.html">Amigos</a>
+                                </div>
+
+
+                                <form class="d-flex barra--pesquisa" role="search" method="get" action="roles.html">
+                                    <input class="form-control me-2" type="search" placeholder="Pesquisar"
+                                        aria-label="Search" id="input-pesquisa" name="keyword">
+                                </form>
+
+
+                                <div class="navbar-nav cabecalho--links-usuario">
+                                    <div id="nomeUser">
+                                        <a class="nav-link links-usuario--profile" href="perfil.html"><i
+                                                class="fa-solid fa-user"></i>Perfil</a>
+                                    </div>
+
+                                    <div id="linksLogin">
+                                        <a class="nav-link links-usuario--login" href="#"><i
+                                                class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal--menu">
+        <!-- Botão Ver Lista de Amigos -->
+        <button id="btnAmigos" class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                class="fa-solid fa-user-group"></i></button>
+
+        <div class="offcanvas offcanvas-end painel--lista-amigos" data-bs-scroll="true" tabindex="-1"
+            id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Lista de Amigos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <input id="pesquisaPainelAmigo" class="offcanvas-body--campo-pesquisa"
+                    oninput="pesquisaAmigosPainelLateral(this.value)" type="text" placeholder="Pesquisar amigo">
+                <div id="listaPainelAmigos" class="offcanvas-body--campo-amigos">
+                    <!-- Inserção da lista de amigos -->
+                </div>
+            </div>
+        </div>
+
+        <!-- INSERIR AS PÁGINAS AQUI -->
+
+        <div id="evento">
+            <div class="container">
+                <div id="cad-event-row" class="row justify-content-center align-items-center">
+                    <div id="cad-event-column" class="col-md-8">
+                        <div id="cad-event-box" class="col-md-12">
+                            <form id="cad-event-form" class="form" method="post" onsubmit="loginUser (this)">
+                                <h3 class="text-center text-warning">Cadastrar Rolê</h3>
+                                <div class="cadastro--evento--nome--linha1">
+                                    <div class="form-group cadastro--evento--nome">
+                                        <label for="nome">Nome do Evento:</label><br>
+                                        <input type="text" name="evt_nome" id="evt_nome" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--evento--data">
+                                        <label for="data">Data do Evento:</label><br>
+                                        <input type="date" name="evt_data" id="evt_data" class="form-control">
+                                    </div>
+                                </div>
+
+                                <p class="text-center">Endereço:</p>
+                                <div class="cadastro--evento--endereco--linha1">
+                                    <div class="form-group cadastro--evento--endereco-rua">
+                                        <label for="rua">Rua:</label><br>
+                                        <input type="text" name="evt_rua" id="evt_rua" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--evento--endereco-numero">
+                                        <label for="numero">Número:</label><br>
+                                        <input type="text" name="evt_numero" id="evt_numero" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="cadastro--evento--endereco--linha2">
+                                    <div class="form-group cadastro--evento--endereco-complemento">
+                                        <label for="complemento">Complemento:</label><br>
+                                        <input type="text" name="evt_complemento" id="evt_complemento"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--evento--endereco-bairro">
+                                        <label for="bairro">Bairro:</label><br>
+                                        <input type="text" name="evt_bairro" id="evt_bairro" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="cadastro--evento--endereco--linha3">
+                                    <div class="form-group cadastro--evento--endereco-cidade">
+                                        <label for="cidade">Cidade:</label><br>
+                                        <input type="text" name="evt_cidade" id="evt_cidade" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--evento--endereco-estado">
+                                        <label for="estado">Estado:</label><br>
+                                        <select name="evt_estado" id="evt_estado" class="form-select">
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="ES">Espírito Santo</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <p class="text-center">Descrição do Evento:</p>
+                                <div class="form-group cadastro--evento--descricao">
+                                    <textarea name="evt_descricao" id="evt_descricao"></textarea>
+                                </div>
+
+                                <p class="text-center">Filtros:</p>
+                                <div class="cadastro--evento--filtros--linha1">
+                                    <div class="form-group cadastro--evento--filtros-idade">
+                                        <label for="idade">Faixa Etária:</label><br>
+                                        <select name="evt_idade" id="evt_idade" class="form-select">
+                                            <option value="18">Maior de 18</option>
+                                            <option value="0">Livre</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group cadastro--evento--filtros-preco">
+                                        <label for="preco">Preço:</label><br>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">R$</span>
+                                            <input type="text" name="evt_preco" id="evt_preco" class="form-control"
+                                                placeholder="XX,XX" aria-label="0" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group cadastro--evento--filtros-categoria">
+                                        <label for="categoria">Categoria:</label><br>
+                                        <select name="evt_categoria" id="evt_categoria" class="form-select">
+                                            <option value="Arte e Cinema">Arte e Cinema</option>
+                                            <option value="Esportes">Esportes</option>
+                                            <option value="Festas e Shows">Festas e Shows</option>
+                                            <option value="Gastronomia">Gastronomia</option>
+                                            <option value="Infantil">Infantil</option>
+                                            <option value="">Todas</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <p class="text-center">Contatos:</p>
+                                <div class="cadastro--evento--contato--linha1">
+                                    <div class="form-group cadastro--evento--contato-telefone">
+                                        <label for="telefone">Telefone:</label><br>
+                                        <input type="text" name="evt_telefone" id="evt_telefone" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--evento--contato-email">
+                                        <label for="email">Email:</label><br>
+                                        <input type="text" name="evt_email" id="evt_email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="cadastro--evento--contato--linha2">
+                                    <div class="form-group cadastro--evento--contato-instagram">
+                                        <label for="instagram">Instagram:</label><br>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                            <input type="text" name="evt_instagram" id="evt_instagram"
+                                                class="form-control" placeholder="Usuário" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group cadastro--evento--contato-facebook">
+                                        <label for="facebook">Facebook:</label><br>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                            <input type="text" name="evt_facebook" id="evt_facebook"
+                                                class="form-control" placeholder="Usuário" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group cadastro--foto-capa-evento">
+                                    <label for="imgcapa">Imagem de Capa (1:1):</label><br>
+                                    <input type="file" name="imgEvtCapa" id="imgEvtCapa" class="form-control">
+                                </div>
+
+                                <div class="cadastro--foto--varias">
+                                    <div class="form-group cadastro--foto-foto1-evento">
+                                        <label for="imgevt1">Imagem do Evento (2:1):</label><br>
+                                        <input type="file" name="imgEvtFoto1" id="imgEvtFoto1" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--foto-foto2-evento">
+                                        <label for="imgevt2">Imagem do Evento (2:1):</label><br>
+                                        <input type="file" name="imgEvtFoto2" id="imgEvtFoto2" class="form-control">
+                                    </div>
+                                    <div class="form-group cadastro--foto-foto3-evento">
+                                        <label for="imgevt3">Imagem do Evento (2:1):</label><br>
+                                        <input type="file" name="imgEvtFoto3" id="imgEvtFoto3" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="text-center">
+                                <button type="button" id="btn_salvar_evt" class="btn btn-warning">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="rodape bg-dark">
+        <div class="container">
+            <div class="row rodape--linha-um">
+                <div class="col-3">
+                    <img src="imgs/logo.png" alt="Logo do site" class="rodape--logo">
+                </div>
+            </div>
+
+            <div class="row rodape--linha-dois">
+                <div class="col-6 rodape--coluna-sobre">
+                    <h6 class="rodape--linha-dois-titulo">Sobre</h6>
+                    <p>O nosso objetivo é desenvolver uma plataforma que facilite para as pessoas encontrarem um rolê
+                        onde elas vão se sentir a vontade e aproveitar cada minuto! Também, a saber informações crucias
+                        sobre o evento, ter interações em tempo real e poder avaliar o rolê para que as pessoas que estão
+                        pensando em ir saibam se vale a pena ou não.</p>
+                </div>
+
+                <div class="col-2 rodape--coluna-mapa-site">
+                    <h6 class="rodape--linha-dois-titulo">Mapa do site</h6>
+                    <ul class="rodape--linha-dois-lista">
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Rolês</a></li>
+                        <li><a href="#">Amigos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2 rodape--coluna-sobre-nos">
+                    <h6 class="rodape--linha-dois-titulo">Sobre nós</h6>
+                    <ul class="rodape--linha-dois-lista">
+                        <li><a href="#">Redes Sociais</a></li>
+                        <li><a href="#">Contatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2 rodape--coluna-contato">
+                    <h6 class="rodape--linha-dois-titulo">Contato</h6>
+                    <div class="rodape--coluna-contato--redes-sociais"></div>
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-reddit fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-github fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram fa-2x"></i></a>
+                </div>
+            </div>
+
+            <div class="row rodape--linha-tres">
+                <div class="col-12 rodape--linha-tres-copyright">
+                    <p>&#169; Copyright 2022 - Disciplina de Trabalho Interdisciplinar: Aplicações Web - <span
+                            style="font-weight: 600;">ICEI PUC Minas</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+
+    <script src="scripts/main.js"></script>
+
+    <script src="scripts/login.js"></script>
+
+    <script>
+        $('#input-pesquisa').focus(function () {
+            $(this).attr("placeholder", "Pesquisar o nome de um rolê");
+        })
+
+        $('#input-pesquisa').blur(function () {
+            $(this).attr("placeholder", "Pesquisar");
+        })
+
+        var dia = 0;
+        var mes = 0;
+        var ano = 0;
+
+        // Função para puxar o valor da data do evento
+        document.getElementById('evt_data').addEventListener("change", () => {
+            var dataevt = $('#evt_data').val().split('-');
+            dia = dataevt[2];
+            mes = dataevt[1];
+            ano = dataevt[0];
+        });
+
+        // Função para salvar imagem no banco de dados
+        var imagemCapa;
+
+        document.getElementById('imgEvtCapa').addEventListener("change", function () {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                imagemCapa = reader.result;
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+        
+        var imagemEvento1;
+
+        document.getElementById('imgEvtFoto1').addEventListener("change", function () {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                imagemEvento1 = reader.result;
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+        
+        var imagemEvento2;
+
+        document.getElementById('imgEvtFoto2').addEventListener("change", function () {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                imagemEvento2 = reader.result;
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        var imagemEvento3;
+        
+        document.getElementById('imgEvtFoto3').addEventListener("change", function () {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                imagemEvento3 = reader.result;
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        // Funções para esconder a navbar em usuário não logado
+        document.body.onload = () => {
+            let barra = document.getElementById('linksNavbar');
+            let perfil = document.getElementById('nomeUser');
+            let logon = document.getElementById('linksLogin');
+            let botaoamigos = document.getElementById('btnAmigos');
+
+            if (!usuarioCorrente.login) {
+                barra.style.display = "none";
+                perfil.style.display = "none";
+                botaoamigos.style.display = "none";
+                logon.innerHTML = `<a class="nav-link links-usuario--login" href="login.html"><i
+                                                class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>`;
+            }
+        }
+
+        // Funções para exibir a navbar em usuário logado
+        function initPage() {
+            // Associa a função de logout ao botão
+            document.getElementById('linksLogin').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+            document.getElementById('nomeUser').innerHTML = `<a class="nav-link links-usuario--profile" href="perfil.html"><img src="${usuarioCorrente.foto}" alt="Foto de perfil">${usuarioCorrente.nome}</a>`;
+        }
+
+        // Inicializa as estruturas utilizadas pelo LoginApp
+        initLoginApp();
+
+        // Associa ao evento de carga da página a função para verificar se o usuário está logado
+        window.addEventListener('load', initPage);
+
+        // Funções para exibir os usuários e amigos
+        exibeAmigosPainelLateral();
+
+        // Função para salvar o rolê cadastrado
+        function salvaEvento(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados do formulário
+            let nome = document.getElementById('evt_nome').value;
+            
+            let rua = document.getElementById('evt_rua').value;
+            let numero = document.getElementById('evt_numero').value;
+            let complemento = document.getElementById('evt_complemento').value;
+            let bairro = document.getElementById('evt_bairro').value;
+            let cidade = document.getElementById('evt_cidade').value;
+            let estado = document.getElementById('evt_estado').value;
+            
+            let descricao = document.getElementById('evt_descricao').value;
+            
+            let idade = document.getElementById('evt_idade').value;
+            let preco = document.getElementById('evt_preco').value;
+            let categoria = document.getElementById('evt_categoria').value;
+            
+            let telefone = document.getElementById('evt_telefone').value;
+            let email = document.getElementById('evt_email').value;
+            let instagram = document.getElementById('evt_instagram').value;
+            let facebook = document.getElementById('evt_facebook').value;
+
+            // Adiciona o usuário no banco de dados
+            incluirRole(nome, dia, mes, ano, rua, numero, complemento, bairro, cidade, estado, descricao, idade, preco, categoria, telefone, email, instagram, facebook, imagemCapa, imagemEvento1, imagemEvento2, imagemEvento3);
+            alert('Rolê cadastrado!');
+            window.location = ROLES_URL;
+        }
+
+        // Associar salvamento ao botao
+        document.getElementById('btn_salvar_evt').addEventListener('click', salvaEvento);
+    </script>
+</body>
+
+</html>
